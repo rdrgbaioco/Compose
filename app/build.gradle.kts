@@ -59,7 +59,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     // Koin
-    implementation(platform("io.insert-koin:koin-bom:4.0.3"))
+    implementation(platform(libs.koin.bom))
     implementation(libs.koin.androidx.compose)
 
 
