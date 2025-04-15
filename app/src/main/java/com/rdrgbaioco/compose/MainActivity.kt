@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rdrgbaioco.compose.navigation.NavigationGraph
 import com.rdrgbaioco.compose.ui.theme.ComposeTheme
+import org.koin.androidx.compose.KoinAndroidContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeTheme {
-                NavigationGraph()
+                KoinAndroidContext {
+                    NavigationGraph()
+                }
             }
         }
     }
